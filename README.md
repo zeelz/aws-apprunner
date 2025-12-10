@@ -1,23 +1,5 @@
-## Simple Express API image
+## App Runner Service Deploy
 
-[https://hub.docker.com/r/zeelz/simple-express-app](https://hub.docker.com/r/zeelz/simple-express-app)
+### This Repo is a sample app to deploy Nodejs (express) app to AWS App Runner using its github action -  App Runner Service Deploy
 
-```
-docker run -d
--p [HOST_PORT]:[CONTAINER_PORT] \
--e PORT=[CONTAINER_PORT] \
---platform linux/amd64 \
-zeelz/simple-express-app
-```
-
-Change `HOST_PORT` and `CONTAINER_PORT` to your desired ports
-
-**Example**
-
-`docker run -d -p 3000:3000 -e "PORT=3000" --platform linux/amd64 zeelz/simple-express-app`
-
-**Available route**
-
-GET `/users`
-
-POST `/users` {name, email}
+[https://github.com/awslabs/amazon-app-runner-deploy](https://github.com/awslabs/amazon-app-runner-deploy)
