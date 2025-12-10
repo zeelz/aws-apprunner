@@ -1,4 +1,4 @@
-name: Deploy App Runner service
+name: Deploy App Runner Service
 
 on:
     push:
