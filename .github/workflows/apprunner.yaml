@@ -24,6 +24,12 @@ jobs:
                 aws-region: ${{ env.REGION }}
 
             - name: App Runner Deploy
+              env:
+                DB_NAME: "postgres"
+                DB_USER: "zeelz"
+                DB_HOST: "4.tcp.eu.ngrok.io"
+                DB_PORT: "10048"                
+
               id: deploy-apprunner
               uses: awslabs/amazon-app-runner-deploy@main # Deploy app runner service
               with:
@@ -39,3 +45,8 @@ jobs:
                 cpu : 0.25
                 memory : 0.5
                 wait-for-service-stability-seconds: 600
+                copy-env-vars: |
+                    DB_USER
+                    DB_NAME
+                    DB_HOST
+                    DB_PORT
