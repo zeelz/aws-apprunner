@@ -54,4 +54,4 @@ app.get('/users', async (req: Request, res: Response) => {
 })
 
 // server.listen(PORT, "0.0.0.0", () => console.log('App started on port', PORT))
-app.listen(PORT, "0.0.0.0", () => console.log('App started on port', PORT))
+app.listen(PORT, "0.0.0.0", () => console.log(`App started: http://localhost:${PORT}`))
